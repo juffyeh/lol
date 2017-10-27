@@ -1,0 +1,829 @@
+/*
+* @Author: Juff
+* @Date:   2017-07-15 19:36:16
+* @Last Modified by:   Juff
+* @Last Modified time: 2017-09-19 10:29:07
+*/
+*{margin: 0;padding: 0;box-sizing: border-box;}
+ul,ol{list-style: none;}
+a{text-decoration: none;}
+body{font:normal 12px/1.6em Microsoft YaHei,Tahoma,simsun; color:#666;min-width:1240px;margin:0 auto;background:#f7f8f8}
+.clearfix::after{content:'';display: block;clear: both;}
+.clearfix { zoom: 1; }
+.header-box{
+    width: 100%;
+    height: 90px;
+    background: #0B0B0B;
+    position: relative;
+}
+.header{
+    position: relative;
+    width: 1240px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+.header .logo{
+    width: 190px;
+    height: 100px;
+    background: transparent url('http://ossweb-img.qq.com/images/lol/v2/spr-v2.png') no-repeat 0 -28px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+.header .menu{
+    float: left;
+    margin-left: 190px;
+    height: 90px;
+}
+.header .menu li{
+    width: 120px;
+    margin-top: 26px;
+    margin-bottom: 26px;
+    text-align: center;
+    float: left;
+}
+.header .menu li span{
+    display: block;
+    font-size: 18px;
+}
+.header .menu li p{
+    font-size: 10px;
+    font-family: 'Tahoma';
+    color: #838383;
+}
+.header-box .popover{
+    display: none;
+    position: absolute;
+    padding: 20px 0;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1;
+}
+.header-box .popover .popover-a{
+    width: 1240px;
+    margin: 0 auto;
+}
+.header-box .popover .popover-b{
+    margin-left: 190px;
+    text-align: center;
+}
+.header-box .popover .popover-b ul li{
+    width: 120px;
+    float: left;
+}
+.header-box .popover .popover-b ul li a{
+    display: block;
+    color: #e1e1e1;
+    font-size: 14px;
+    line-height: 28px;
+}
+.header-box .popover .popover-b ul li a:hover{
+    color: #E5BD6A;
+}
+.header-box .popover.active{
+    display: block;
+}
+
+.header .icon{
+    float: left;
+    padding: 0 5px;
+    height: 90px;
+    margin-left: 5px;
+}
+.header .icon .search{
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    margin-top: 25px;
+    background: transparent url('http://ossweb-img.qq.com/images/lol/v2/spr-v2.png') no-repeat -8px 0px;
+    float: left;
+}
+.header .icon .mobile{
+    display: inline-block;
+    width: 21px;
+    height: 27px;
+    margin-top: 25px;
+    margin-left: 20px;
+    background: transparent url('http://ossweb-img.qq.com/images/lol/v2/spr-v2.png') no-repeat -45px 0px;
+    float: left;
+}
+.header .user{
+    display: inline-block;
+    float: right;
+    height: 90px;
+}
+.header .user.active{
+    background: rgba(0,0,0,0.8);
+}
+.header .user .icon-wrap{
+    display: inline-block;
+    width: 88px;
+    height: 90px;
+    position: relative;
+    float: left;
+    padding-left: 14px;
+}
+.header .user .icon-user{
+    position: absolute;
+    display: inline-block;
+    width: 74px;
+    height: 74px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent url('http://ossweb-img.qq.com/images/lol/v2/spr-v2.png') no-repeat 0 -169px;
+    z-index: 1;
+}
+.header .user .icon-user img{
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    border-radius: 33px;
+    top: 10px;
+    left: 10px;
+}
+.header .user .text{
+    display: inline-block;
+    float: right;
+    margin: 21px 23px;
+}
+.header .user .text span{
+    font-size: 16px;
+}
+.header .user .text a{
+    color: #DFB257;
+    margin-left: 2px;
+}
+.header .user .text p{
+    font-size: 10px;
+    font-family: 'Tahoma';
+    color: #838383;
+    margin: 5px 0;
+}
+.header .alert-content{
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 100%;
+    width: 350px;
+    height: 114px;
+    padding-top: 20px;
+    background: rgba(0,0,0,0.8);
+    z-index: 2;
+}
+.header .alert-content .alert-text{
+    padding: 10px 30px 30px;
+    text-align: left;
+    color: #868686;
+    font-size: 14px;
+}
+.header .alert-content .alert-enter{
+    text-align: center;
+    line-height: 36px;
+    background: #161413;
+    width: 100%;
+    font-size: 12px;
+    color: #e0e0e0;
+}
+.header .alert-content.active{
+    display: block;
+}
+#banner{
+    width: 100%;
+    display: block;
+    position: relative;
+}
+#banner .video-wrapper > video{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#banner .video-wrapper > video.active{
+    display: block;
+}
+#banner .banner-content{
+    position: absolute;
+    width: 1240px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 115px;
+    text-align: left;
+}
+#banner .banner-content > h2{
+    display: inline-block;
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 10px;
+    color: #BD9647;
+    font-weight: bold;
+}
+#banner .banner-content > p{
+    font-size: 14px;
+    color: #dbdbdb;
+    line-height: 1.5;
+    overflow: hidden;
+    text-shadow: 0 0 5px #000;
+    margin-bottom: 25px;
+    padding-bottom: 40px;
+}
+#banner .banner-content .look{
+    display: block;
+    width: 155px;
+    line-height: 36px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #c89b3c;
+    text-align: center;
+    border: 2px solid #bd9440;
+    background: rgba(0,0,0,0.65);
+}
+#banner .banner-content .look:hover{
+    background: rgba(0,0,0,0.9);
+}
+#banner .banner-content .version{
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    font-size: 14px;
+    color: #888787;
+}
+#banner .banner-content .version > em{
+    color: #f5d185;
+    margin-right: 10px;
+    font-style: normal;
+}
+#banner .banner-content .version > a{
+    display: inline-block;
+    font-size: 12px;
+    color: #f5d185;
+    line-height: 22px;
+    padding: 0 15px;
+    border: 2px solid #bd9440;
+    background: rgba(0,0,0,0.65);
+}
+#banner .banner-content .version > a:hover{
+    background: rgba(0,0,0,0.9);
+}
+#navs{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 80px;
+    border-top: 2px solid #8c6c2d;
+    background: url('../images/lol.png') repeat-x 0 -257px;
+}
+#navs > ul{
+    width: 1240px;
+    margin: 0 auto;
+}
+#navs > ul > li{
+    float: left;
+    width: 110px;
+    line-height: 58px;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 50px;
+    cursor: pointer;
+}
+#navs > ul > li.active{
+    color: #d1ab57;
+    border-bottom: 2px solid #d1ab57;
+}
+#navs-content{
+    width: 1240px;
+    margin: 0 auto;
+    padding-top: 22px;
+}
+#navs-content > div{
+    display: none;
+}
+#navs-content > div.active{
+    display: block;
+}
+#navs-content .content-top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#navs-content .content-tab{
+    width: 820px;
+    height: 400px;
+}
+#navs-content .content-tab .tab-pic{
+    width: 820px;
+    overflow: hidden;
+}
+#navs-content .content-tab .tab-pic > ol{
+    display: flex;
+    transition: transform 0.3s;
+}
+#navs-content .content-tab .tab-pic > ol li{
+    width: 100%;
+    flex-shrink: 0;
+    min-heigt: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#navs-content .content-tab .tab-pic img{
+    width: 820px;
+    height: 350px;
+    vertical-align: top;
+}
+#navs-content .content-tab .tab-button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#navs-content .content-tab .tab-button > li{
+    background: #121112;
+    text-align: center;
+    width: 164px;
+    height: 50px;
+    font-size: 14px;
+    line-height: 50px;
+    color: #c8c8c8;
+    cursor: pointer;
+}
+#navs-content .content-tab .tab-button >li.active{
+    background: #303030;
+    color: #f5d185;
+}
+#navs-content .content-side{
+    width: 400px;
+    background: #F5F5F5;
+}
+#navs-content .content-side .side-meun{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+ }
+#navs-content .content-side .side-meun > a{
+    position:relative;
+    display: block;
+    width: 32.5%;
+    margin-top: 5px;
+    text-align: center;
+    background: #FFFFFF;
+    height: 55px;
+    line-height: 55px;
+    font-size: 14px;
+    color: black;
+}
+#navs-content .content-side .side-meun > a:hover{
+    background: #F0F0F0;
+}
+#navs-content .content-side .side-meun i{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+}
+#navs-content .content-side .side-meun .xs{
+    background: url('../images/lol.png') no-repeat -201px -1px;
+}
+#navs-content .content-side .side-meun .yz{
+    background: url('../images/lol.png') no-repeat -561px -1px;
+}
+#navs-content .content-side .side-meun .zb{
+    background: url('../images/lol.png') no-repeat -593px -1px;
+}
+#navs-content .content-side .side-meun .xk{
+    background: url('../images/lol.png') no-repeat -382px -1px;
+}
+#navs-content .content-side .side-meun .xg{
+    background: url('../images/lol.png') no-repeat -654px -1px;
+}
+#navs-content .content-side .side-meun .dh{
+    background: url('../images/lol.png') no-repeat -292px -1px;
+}
+#navs-content .content-side .side-meun .lh{
+    background: url('../images/lol.png') no-repeat -623px -1px;
+}
+#navs-content .content-side .side-meun .yx{
+    background: url('../images/lol.png') no-repeat -262px -1px;
+}
+#navs-content .content-side .side-meun .lj{
+    background: url('../images/lol.png') no-repeat -471px -1px;
+}
+#navs-content .content-side .side-meun .gf{
+    background: url('../images/lol.png') no-repeat -501px -1px;
+}
+#navs-content .content-side .side-meun .wj{
+    background: url('../images/lol.png') no-repeat -412px -1px;
+}
+#navs-content .content-side .side-meun .kf{
+    background: url('../images/lol.png') no-repeat -443px -1px;
+}
+#navs-content .content-side .side-meun .icon-hot::after{
+    content:'';
+    position: absolute;
+    right: 9px;
+    top: 4px;
+    width: 15px;
+    height: 15px;
+    background: url('../images/lol.png') no-repeat -106px 0;
+}
+#navs-content .content-side .side-meun .icon-new::after{
+    content:'';
+    position: absolute;
+    right: 9px;
+    top: 4px;
+    width: 15px;
+    height: 15px;
+    background: url('../images/lol.png') no-repeat -129px 0;
+}
+#navs-content .news-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 64px;
+    margin-bottom: 60px;
+}
+#navs-content .news-wrapper .news-body{
+    width: 820px;
+}
+#navs-content .news-wrapper .free-hero{
+    width: 400px;
+}
+#navs-content .news-body .news-navs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-bottom: 3px solid #ededee;
+}
+#navs-content .news-body .news-navs > h3{
+    font-size: 26px;
+    line-height: 50px;
+    color: #404040;
+    margin-right: 40px;
+    font-weight: normal;
+}
+#navs-content .news-body .news-navs > ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+}
+#navs-content .news-body .news-navs > ul >li{
+    width: 168px;
+    line-height: 36px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+}
+#navs-content .news-body .news-navs > ul >li.active{
+    color: #d1ab57;
+    font-weight: bold;
+    border-bottom: 3px solid #d1ab57;
+}
+#navs-content .news-body .news-content .news{
+    display: none;
+    padding-top: 24px;
+}
+#navs-content .news-body .news-content .news.active{
+    display: block;
+}
+#navs-content .news-body .news-list .big-news{
+    height: 124px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    cursor: pointer;
+}
+#navs-content .news-body .news-list .big-news img{
+    float: left;
+    margin-right: 20px;
+}
+#navs-content .news-body .news-list .big-news-title{
+    display: block;
+    font-size: 36px;
+    line-height: 50px;
+    overflow: hidden;
+    color: #3e3e3e;
+    font-weight: bold;
+}
+#navs-content .news-body .news-list .big-news-content{
+    display: block;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #898989;
+    overflow: hidden;
+    height: 60px;
+}
+#navs-content .news-body .news-list .news-item{
+    display: block;
+    width: 100%;
+    line-height: 35px;
+    padding: 4px 0;
+}
+#navs-content .news-body .news-list .news-item > a{
+    display: block;
+    position: relative;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 55px 0 90px;
+    overflow: hidden;
+    font-size: 16px;
+    color: #555555;
+}
+#navs-content .news-body .news-list .news-item .news-type{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 68px;
+    line-height: 35px;
+    background: #ebebeb;
+    text-align: center;
+    color: #7a7a7a;
+}
+#navs-content .news-body .news-list .news-item:hover .news-type{
+    background: #d1ab57;
+    color: #fff;
+}
+#navs-content .news-body .news-list .news-item:hover > a{
+    color: #d1ab57;
+}
+#navs-content .news-body .news-list .news-item .date{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 35px;
+    line-height: 35px;
+    text-align: right;
+    color: #bababa;
+}
+#navs-content .news-body .readmore{
+    display: block;
+    width: 100%;
+    background: #f0f0f0;
+    font-size: 16px;
+    line-height: 45px;
+    text-align: center;
+    color: #515151;
+    margin-top: 15px;
+}
+#navs-content .news-body .readmore:hover{
+    background: #DAD8D8;
+}
+#navs-content .news-body .readmore > span{
+    color: #d1ab57;
+}
+#navs-content .news-side{
+
+    width: 400px;
+}
+#navs-content .news-side > ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #ededee;
+}
+#navs-content .news-side > ul li{
+    width: 33.3%;
+    font-size: 16px;
+    text-align: center;
+    line-height: 36px;
+    margin-top: 14px;
+    color: #666666;
+    cursor: pointer;
+}
+#navs-content .news-side > ul li.active{
+    color: #d1ab57;
+    border-bottom: 3px solid #d1ab57;
+}
+#navs-content .news-side .hero-tab{
+    width: 100%;
+    min-height: 420px;
+}
+#navs-content .news-side .hero-tab .free-hero{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#navs-content .news-side .hero-tab .free-hero > a{
+    position: relative;
+    width: 195px;
+    height: 70px;
+    margin-bottom: 10px;
+}
+#navs-content .news-side .hero-tab .free-hero span {
+    display: none;
+    position: absolute;
+    width: 100%;
+    heigh: 100%;
+    left: 0;
+    top: 0;
+    line-height: 70px;
+    font-size: 14px;
+    color: #c9aa71;
+    text-align: center;
+    background: rgba(0,0,0,0.8);
+}
+#navs-content .news-side .hero-tab .free-hero > a:hover span{
+    display: block;
+}
+#navs-content .news-side .hero-tab .free-hero .hid{
+    display: none;
+}
+#navs-content .news-side .hero-tab .free-hero > img{
+    width: 195px;
+    height: 70px;
+    vertical-align: top;
+}
+#navs-content .news-side .hero-tab .free-button{
+    float: left;
+    background: #d1ab57;
+    height: 15px;
+    padding: 0 15px;
+    cursor: pointer;
+}
+#navs-content .news-side .hero-tab .free-button i{
+    display: inline-block;
+    vertical-align: top;
+    line-height: 15px;
+    width: 15px;
+    height: 15px;
+    background: url('../images/lol.png') no-repeat -679px -80px;
+}
+#navs-content .news-side .hero-tab .free-time{
+    float: right;
+    color: #9F9F9F;
+    font-size: 12px;
+    height: 15px;
+}
+#navs-content .news-side .side-go{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    margin-top: 42px;
+    margin-bottom: 20px;
+}
+#navs-content .news-side .side-go img{
+    width: 195px;
+    height: 70px;
+    vertical-align: top;
+}
+#navs-content .news-side .side-tips{
+    position: relative;
+    height: 70px;
+    font-size: 12px;
+    color: #878787;
+    padding-left: 80px;
+    padding-top: 5px;
+}
+#navs-content .news-side .side-tips > i{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    background: url("../images/lol.png") no-repeat -330px -89px;
+}
+#navs-content .news-side .side-tips h5{
+    font-size: 14px;
+    color: #404040;
+    font-weight: normal;
+}
+#navs-content .content-bottom{
+    margin-bottom: 50px;
+    width: 100%;
+}
+#navs-content .content-bottom .bottom-title{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #ededee;
+}
+#navs-content .content-bottom .bottom-title> h3{
+    font-size: 26px;
+    line-height: 50px;
+    color: #404040;
+    margin-right: 40px;
+    font-weight: normal;
+}
+#navs-content .content-bottom .bottom-title > ul{
+    display: flex;
+    justify-content: space-between;
+    height: 36px;
+    margin-top: 14px;
+}
+#navs-content .content-bottom .bottom-title > ul li{
+    width: 150px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+    overflow: hidden;
+}
+#navs-content .content-bottom .bottom-title > ul li.active{
+    color: #d1ab57;
+    border-bottom: 3px solid #d1ab57;
+}
+#navs-content .content-bottom .bottom-body{
+    width: 100%;
+}
+#navs-content .content-bottom .bottom-bodyA >ul{
+    width: 100%;
+    height: 190px;
+    display: flex;
+    justify-content: space-between;
+}
+#navs-content .content-bottom .bottom-bodyA >ul li{
+    width: 190px;
+    height: 155px;
+    position: relative;
+}
+#navs-content .content-bottom .bottom-bodyA >ul li img{
+    width: 190px;
+    height: 110px;
+    margin-bottom: 5px;
+    vertical-align: top;
+}
+#navs-content .content-bottom .bottom-bodyA >ul li span{
+    position: absolute;
+    left: 0;
+    top: 80px;
+    width: 190px;
+    height: 30px;
+    text-align: right;
+    background: rgba(0,0,0,0.5);
+}
+#navs-content .content-bottom .bottom-bodyA >ul li span i{
+    padding-right: 5px;
+    color: #ddd;
+    font-style: normal;
+    line-height: 30px;
+    font-size: 12px;
+}
+#navs-content .content-bottom .bottom-bodyA >ul li h5{
+    font-size: 14px;
+    line-height: 20px;
+    height: 40px;
+    overflow: hidden;
+    font-weight: normal;
+    color: #555;
+}
+
+#navs-content .content-bottom .bottom-bodyA .recommend-more{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    background: #f0f0f0;
+    color: #515151;
+    line-height: 45px;
+    margin-top: 15px;
+}
+#navs-content .content-bottom .bottom-bodyA .recommend-more>span{
+    color: #d1ab57;
+}
+#navs-content .content-bottom .bottom-bodyA .recommend-more:hover{
+    background: #DAD8D8;
+}
+#footer{
+    zoom: 1;
+    padding: 30px 0;
+    background: url("../images/bg-footer.jpg") no-repeat center top;
+}
+#footer .footer-inner{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+    width: 1240px;
+}
+#footer .footer-inner .footer-list{
+    display: block;
+    font-size: 12px;
+}
+#footer .footer-inner .footer-list span{
+    font-size: 11px;
+    color: #568193;
+    padding: 0 2px;
+}
+#footer .footer-inner .footer-list > li{
+    padding: 2px 0 2px;
+    color: #A5A5A5;
+}
+#footer .footer-inner .footer-list > li > a{
+    color: #568193;
+}
+#footer .footer-inner .footer-list .f9{
+    color: #415967;
+}
