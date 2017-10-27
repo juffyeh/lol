@@ -2,7 +2,7 @@
 * @Author: Juff
 * @Date:   2017-07-15 19:36:16
 * @Last Modified by:   Juff
-* @Last Modified time: 2017-09-19 10:29:07
+* @Last Modified time: 2017-10-27 18:36:36
 */
 *{margin: 0;padding: 0;box-sizing: border-box;}
 ul,ol{list-style: none;}
@@ -274,7 +274,7 @@ body{font:normal 12px/1.6em Microsoft YaHei,Tahoma,simsun; color:#666;min-width:
     width: 100%;
     height: 80px;
     border-top: 2px solid #8c6c2d;
-    background: url('../images/lol.png') repeat-x 0 -257px;
+    background: url('http://oyh8xyfui.bkt.clouddn.com/lol.png') repeat-x 0 -257px;
 }
 #navs > ul{
     width: 1240px;
@@ -389,40 +389,40 @@ body{font:normal 12px/1.6em Microsoft YaHei,Tahoma,simsun; color:#666;min-width:
     vertical-align: middle;
 }
 #navs-content .content-side .side-meun .xs{
-    background: url('../images/lol.png') no-repeat -201px -1px;
+    background: url('http://oyh8xyfui.bkt.clouddn.com/lol.png') no-repeat -201px -1px;
 }
 #navs-content .content-side .side-meun .yz{
-    background: url('../images/lol.png') no-repeat -561px -1px;
+    background: url('http://oyh8xyfui.bkt.clouddn.com/lol.png') no-repeat -561px -1px;
 }
 #navs-content .content-side .side-meun .zb{
-    background: url('../images/lol.png') no-repeat -593px -1px;
+    background: url('http://oyh8xyfui.bkt.clouddn.com/lol.png') no-repeat -593px -1px;
 }
 #navs-content .content-side .side-meun .xk{
-    background: url('../images/lol.png') no-repeat -382px -1px;
+    background: url('http://oyh8xyfui.bkt.clouddn.com/lol.png') no-repeat -382px -1px;
 }
 #navs-content .content-side .side-meun .xg{
-    background: url('../images/lol.png') no-repeat -654px -1px;
+    background: url('http://oyh8xyfui.bkt.clouddn.com/lol.png') no-repeat -654px -1px;
 }
 #navs-content .content-side .side-meun .dh{
-    background: url('../images/lol.png') no-repeat -292px -1px;
+    background: url('http://oyh8xyfui.bkt.clouddn.com/lol.png') no-repeat -292px -1px;
 }
 #navs-content .content-side .side-meun .lh{
-    background: url('../images/lol.png') no-repeat -623px -1px;
+    background: url('http://oyh8xyfui.bkt.clouddn.com/lol.png') no-repeat -623px -1px;
 }
 #navs-content .content-side .side-meun .yx{
-    background: url('../images/lol.png') no-repeat -262px -1px;
+    background: url('http://oyh8xyfui.bkt.clouddn.com/lol.png') no-repeat -262px -1px;
 }
 #navs-content .content-side .side-meun .lj{
-    background: url('../images/lol.png') no-repeat -471px -1px;
+    background: url('http://oyh8xyfui.bkt.clouddn.com/lol.png') no-repeat -471px -1px;
 }
 #navs-content .content-side .side-meun .gf{
-    background: url('../images/lol.png') no-repeat -501px -1px;
+    background: url('http://oyh8xyfui.bkt.clouddn.com/lol.png') no-repeat -501px -1px;
 }
 #navs-content .content-side .side-meun .wj{
-    background: url('../images/lol.png') no-repeat -412px -1px;
+    background: url('http://oyh8xyfui.bkt.clouddn.com/lol.png') no-repeat -412px -1px;
 }
 #navs-content .content-side .side-meun .kf{
-    background: url('../images/lol.png') no-repeat -443px -1px;
+    background: url('http://oyh8xyfui.bkt.clouddn.com/lol.png') no-repeat -443px -1px;
 }
 #navs-content .content-side .side-meun .icon-hot::after{
     content:'';
@@ -431,7 +431,7 @@ body{font:normal 12px/1.6em Microsoft YaHei,Tahoma,simsun; color:#666;min-width:
     top: 4px;
     width: 15px;
     height: 15px;
-    background: url('../images/lol.png') no-repeat -106px 0;
+    background: url('http://oyh8xyfui.bkt.clouddn.com/lol.png') no-repeat -106px 0;
 }
 #navs-content .content-side .side-meun .icon-new::after{
     content:'';
@@ -440,7 +440,7 @@ body{font:normal 12px/1.6em Microsoft YaHei,Tahoma,simsun; color:#666;min-width:
     top: 4px;
     width: 15px;
     height: 15px;
-    background: url('../images/lol.png') no-repeat -129px 0;
+    background: url('http://oyh8xyfui.bkt.clouddn.com/lol.png') no-repeat -129px 0;
 }
 #navs-content .news-wrapper{
     width: 100%;
@@ -658,7 +658,7 @@ body{font:normal 12px/1.6em Microsoft YaHei,Tahoma,simsun; color:#666;min-width:
     line-height: 15px;
     width: 15px;
     height: 15px;
-    background: url('../images/lol.png') no-repeat -679px -80px;
+    background: url('http://oyh8xyfui.bkt.clouddn.com/lol.png') no-repeat -679px -80px;
 }
 #navs-content .news-side .hero-tab .free-time{
     float: right;
@@ -693,7 +693,7 @@ body{font:normal 12px/1.6em Microsoft YaHei,Tahoma,simsun; color:#666;min-width:
     left: 0;
     width: 70px;
     height: 70px;
-    background: url("../images/lol.png") no-repeat -330px -89px;
+    background: url("http://oyh8xyfui.bkt.clouddn.com/lol.png") no-repeat -330px -89px;
 }
 #navs-content .news-side .side-tips h5{
     font-size: 14px;
