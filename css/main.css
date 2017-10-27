@@ -800,7 +800,7 @@ body{font:normal 12px/1.6em Microsoft YaHei,Tahoma,simsun; color:#666;min-width:
 #footer{
     zoom: 1;
     padding: 30px 0;
-    background: url("../images/bg-footer.jpg") no-repeat center top;
+    background: url("http://oyh8xyfui.bkt.clouddn.com/bg-footer.jpg") no-repeat center top;
 }
 #footer .footer-inner{
     display: flex;
